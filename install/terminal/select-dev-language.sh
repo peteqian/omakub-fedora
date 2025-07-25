@@ -23,8 +23,10 @@ if [[ -n "$languages" ]]; then
       mise use --global go@latest
       ;;
     PHP)
-      sudo add-apt-repository -y ppa:ondrej/php
-      sudo apt -y install php8.4 php8.4-{curl,apcu,intl,mbstring,opcache,pgsql,mysql,sqlite3,redis,xml,zip}
+      sudo dnf install -y https://rpms.remirepo.net/fedora/remi-release-42.rpm
+      sudo dnf module reset php
+      sudo dnf module install -y php:remi-8.4
+      sudo dnf install -y php-curl php-pecl-apcu php-intl php-mbstring php-opcache php-pgsql php-mysqlnd php-sqlite3 php-pecl-redis php-xml php-zip
       php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
       php composer-setup.php --quiet && sudo mv composer.phar /usr/local/bin/composer
       rm composer-setup.php

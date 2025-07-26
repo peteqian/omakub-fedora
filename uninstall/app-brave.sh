@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sudo apt remove --purge -y brave-browser
-sudo rm /etc/apt/sources.list.d/brave-browser-release.list
+sudo dnf remove -y brave-browser
+sudo rm -f /etc/yum.repos.d/brave-browser.repo
 sudo rm /usr/share/keyrings/brave-browser-*.gpg

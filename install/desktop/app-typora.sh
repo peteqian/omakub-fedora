@@ -1,7 +1,6 @@
 #!/bin/bash
 
-sudo dnf install -y snapd
-sudo snap install typora
+sudo flatpak install -y flathub io.typora.Typora
 
 # Add iA Typora theme
 mkdir -p ~/.config/Typora/themes

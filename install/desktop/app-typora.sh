@@ -9,11 +9,11 @@
 # sudo apt update -y
 # sudo apt install -y typora
 
-# Install with db
+# Install with rpm
 cd /tmp
-wget -O typora.deb "https://downloads.typora.io/linux/typora_1.10.8_amd64.deb"
-sudo apt install -y /tmp/typora.deb
-rm typora.deb
+wget -O typora.rpm "https://downloads.typora.io/linux/typora-1.10.8-x86_64.rpm"
+sudo dnf install -y ./typora.rpm
+rm typora.rpm
 cd -
 
 # Add iA Typora theme

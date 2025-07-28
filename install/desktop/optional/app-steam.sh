@@ -1,8 +1,6 @@
 #!/bin/bash
 
 # Play games from https://store.steampowered.com/
-cd /tmp
-wget https://cdn.akamai.steamstatic.com/client/installer/steam.deb
-sudo apt install -y ./steam.deb
-rm steam.deb
-cd -
+# Enable RPM Fusion repositories first for Steam
+sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install -y steam

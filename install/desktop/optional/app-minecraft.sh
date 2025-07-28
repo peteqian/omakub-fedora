@@ -1,9 +1,11 @@
 #!/bin/bash
 
-sudo apt install -y openjdk-8-jdk
+sudo dnf install -y java-1.8.0-openjdk
 
 cd /tmp
-wget https://launcher.mojang.com/download/Minecraft.deb
-sudo apt install -y ./Minecraft.deb
-rm Minecraft.deb
+wget https://launcher.mojang.com/download/Minecraft.tar.gz
+tar -xzf Minecraft.tar.gz
+sudo mv minecraft-launcher /opt/
+sudo ln -sf /opt/minecraft-launcher/minecraft-launcher /usr/local/bin/minecraft-launcher
+rm Minecraft.tar.gz
 cd -

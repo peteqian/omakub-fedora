@@ -1,7 +1,7 @@
 #!/bin/bash
 
-curl -fsSL "https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/windsurf.gpg" | sudo gpg --dearmor -o /usr/share/keyrings/windsurf-stable-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/windsurf-stable-archive-keyring.gpg arch=amd64] https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/apt stable main" | sudo tee /etc/apt/sources.list.d/windsurf.list >/dev/null
+curl -fsSL "https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/windsurf.gpg" | sudo tee /etc/pki/rpm-gpg/windsurf-stable-archive-keyring.gpg >/dev/null
+sudo rpm --import /etc/pki/rpm-gpg/windsurf-stable-archive-keyring.gpg
+echo -e "[windsurf]\nname=Windsurf Editor\nbaseurl=https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/rpm\nenabled=1\ngpgcheck=1\ngpgkey=file:///etc/pki/rpm-gpg/windsurf-stable-archive-keyring.gpg" | sudo tee /etc/yum.repos.d/windsurf.repo >/dev/null
 
-sudo apt update -y
-sudo apt install -y windsurf
+sudo dnf install -y windsurf

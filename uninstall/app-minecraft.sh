@@ -1,3 +1,5 @@
 #!/bin/bash
 
-sudo apt remove -y openjdk-8-jdk minecraft-launcher
+sudo dnf remove -y java-1.8.0-openjdk
+sudo rm -rf /opt/minecraft-launcher
+sudo rm -f /usr/local/bin/minecraft-launcher

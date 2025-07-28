@@ -9,12 +9,7 @@
 # sudo apt update -y
 # sudo apt install -y typora
 
-# Install with rpm
-cd /tmp
-wget -O typora.rpm "https://downloads.typora.io/linux/typora-1.10.8-x86_64.rpm"
-sudo dnf install -y ./typora.rpm
-rm typora.rpm
-cd -
+flatpak install -y flathub io.typora.Typora
 
 # Add iA Typora theme
 mkdir -p ~/.config/Typora/themes

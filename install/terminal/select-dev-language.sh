@@ -38,6 +38,9 @@ if [[ -n "$languages" ]]; then
       ;;
     Rust)
       bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs)" -- -y
+      source $HOME/.cargo/env
+      # TODO: Fix this as it should be located in its own installation. No maintainer for dnf, only in cargo :(
+      cargo install eza
       ;;
     Java)
       mise use --global java@latest

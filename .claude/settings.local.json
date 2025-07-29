@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "WebFetch(domain:dl.google.com)",
+      "WebFetch(domain:downloads.typora.io)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:zoom.us)"
+    ],
+    "deny": []
+  }
+}

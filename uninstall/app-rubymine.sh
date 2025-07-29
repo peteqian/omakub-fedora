@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo snap remove rubymine
+flatpak uninstall -y com.jetbrains.RubyMine

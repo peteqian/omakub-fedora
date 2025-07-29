@@ -18,4 +18,4 @@ While omakub is purposed to be an opinionated take, the open source community of
 
 [⇒ Browse the omakub extensions.](EXTENSIONS.md)
 
-Thanks nerd.
+Thanks nerd [@dhh](https://github.com/dhh)

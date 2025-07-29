@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo dnf install -y fzf ripgrep bat eza zoxide mlocate httpd-tools fd-find tldr
+sudo dnf install -y fzf ripgrep bat zoxide plocate httpd-tools fd-find tldr
